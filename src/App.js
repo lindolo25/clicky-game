@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Score from './components/score';
 import Card from './components/card';
+import Cards from './Cards.json';
 
 class App extends Component 
 {
@@ -8,21 +9,7 @@ class App extends Component
 		currentScore: 0,
 		topScore: 12,
 		message: "",
-		cards: [{
-				id: 0,
-				selected: false,
-				value: "0"
-			},
-			{
-				id: 1,
-				selected: false,
-				value: "1"
-			},
-			{
-				id: 2,
-				selected: false,
-				value: "2"
-			}]
+		cards: this.shuffle(Cards)
 	}
 
   	render()
