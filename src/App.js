@@ -7,7 +7,7 @@ class App extends Component
 {
 	state = {
 		currentScore: 0,
-		topScore: 12,
+		topScore: 4,
 		message: "",
 		cards: this.shuffle(Cards)
 	}
@@ -30,10 +30,41 @@ class App extends Component
 		);
 	}
 
-	cardOnClick(e) 
+	cardOnClick(id) 
 	{
-		//alert("will be called ?");
-		this.setState({ cards: this.shuffle(this.state.cards) });
+		let card = this.state.cards.find((item) => item.id === id);
+		if(card.selected) return this.resetGame();
+		
+		card.selected = true;
+		let currentScore = this.state.currentScore + 1;
+		let topScore = this.state.topScore < currentScore ? currentScore : this.state.topScore;
+
+		this.setState({ 
+			cards: this.shuffle(this.state.cards), 
+			currentScore: currentScore,
+			topScore: topScore 
+		});
+	}
+
+	resetGame()
+	{
+		console.log("resetGame");
+		this.setState({
+			currentScore: 0,
+			message: "",
+			cards: this.resetCards(this.state.cards)
+		});
+		
+		console.log();
+	}
+
+	resetCards(cards)
+	{
+		console.log("resetCards");
+		cards.forEach(card  => {
+			card.selected = false;
+		});
+		return this.shuffle(cards);
 	}
 
 	shuffle(cards)
