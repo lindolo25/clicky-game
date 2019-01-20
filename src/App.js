@@ -20,10 +20,8 @@ class App extends Component
 				<div className="row">
 					<div className="col-12 col-sm-10 offset-sm-1">
 						<div className="row">
-							{this.state.cards.map((card, i) => {
-								return (<Card key={card.id} card={card} onClick={this.cardOnClick.bind(this)} />);
-							})}
-						</div>						
+							{this.state.cards.map((card) => <Card key={card.id} card={card} onClick={this.cardOnClick.bind(this)} />)}
+						</div>
 					</div>
 				</div>
 			</div>
@@ -38,7 +36,7 @@ class App extends Component
 		card.selected = true;
 		let currentScore = this.state.currentScore + 1;
 		let topScore = this.state.topScore < currentScore ? currentScore : this.state.topScore;
-
+		
 		this.setState({ 
 			cards: this.shuffle(this.state.cards), 
 			currentScore: currentScore,

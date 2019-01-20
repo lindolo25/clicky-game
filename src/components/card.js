@@ -1,7 +1,10 @@
 import React from "react";
+import "./card.css";
 
 var Card = (props) => (
-    <div className="col-12 col-sm-6 col-md-3 text-center" onClick={ e => props.onClick(props.card.id)}>Example {props.card.value}, {props.card.selected.toString()}</div>
+    <div className="col-12 col-sm-6 col-md-3 text-center">
+        <div className="card-box" onClick={ e => props.onClick(props.card.id)}>Example {props.card.value}, {props.card.selected.toString()}</div>
+    </div>
 );
 
 // class Card extends React.Component 
