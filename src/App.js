@@ -9,7 +9,8 @@ class App extends Component
 		currentScore: 0,
 		topScore: 4,
 		message: "",
-		cards: this.shuffle(Cards)
+		cards: this.shuffle(Cards),
+		justReset: false
 	}
 
   	render()
@@ -19,7 +20,7 @@ class App extends Component
 				<Score currentScore={this.state.currentScore} topScore={this.state.topScore} message={this.state.message} />
 				<div className="row">
 					<div className="col-12 col-sm-10 offset-sm-1">
-						<div className="row">
+						<div className={this.state.justReset ? "row shake-horizontal" : "row"}>
 							{this.state.cards.map((card) => <Card key={card.id} card={card} onClick={this.cardOnClick.bind(this)} />)}
 						</div>
 					</div>
@@ -38,9 +39,11 @@ class App extends Component
 		let topScore = this.state.topScore < currentScore ? currentScore : this.state.topScore;
 		
 		this.setState({ 
-			cards: this.shuffle(this.state.cards), 
+			cards: this.shuffle(this.state.cards),
 			currentScore: currentScore,
-			topScore: topScore 
+			message: "Great guess keep it going !!!",
+			topScore: topScore,
+			justReset: false
 		});
 	}
 
@@ -49,8 +52,9 @@ class App extends Component
 		console.log("resetGame");
 		this.setState({
 			currentScore: 0,
-			message: "",
-			cards: this.resetCards(this.state.cards)
+			message: "Sorry already clicked.",
+			cards: this.resetCards(this.state.cards),
+			justReset: true
 		});
 		
 		console.log();
