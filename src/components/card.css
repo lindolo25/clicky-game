@@ -20,6 +20,8 @@
     height: auto;
 }
 
+.extra-class-not-used { color: red }
+
 @keyframes shake-horizontal {
  2% {
   transform:translate(-5px, 0) rotate(0)
