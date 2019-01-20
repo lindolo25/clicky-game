@@ -19,7 +19,7 @@ class App extends Component
 			<div className="container-fluid">
 				<Score currentScore={this.state.currentScore} topScore={this.state.topScore} message={this.state.message} />
 				<div className="row">
-					<div className="col-12 col-sm-10 offset-sm-1">
+					<div className="col-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2">
 						<div className={this.state.justReset ? "row shake-horizontal" : "row"}>
 							{this.state.cards.map((card) => <Card key={card.id} card={card} onClick={this.cardOnClick.bind(this)} />)}
 						</div>

@@ -1,20 +1,72 @@
 [{
     "id": 0,
     "selected": false,
-    "value": "0"
+    "value": "https://clicky-game.netlify.com/assets/images/birdperson.png",
+    "alt": "Bird Person"
 },
 {
     "id": 1,
     "selected": false,
-    "value": "1"
+    "value": "https://clicky-game.netlify.com/assets/images/meeseeks.png",
+    "alt": "Meeseeks"
 },
 {
     "id": 2,
     "selected": false,
-    "value": "2"
+    "value": "https://clicky-game.netlify.com/assets/images/mr.png",
+    "alt": "Mr"
 },
 {
     "id": 3,
     "selected": false,
-    "value": "3"
+    "value": "https://clicky-game.netlify.com/assets/images/evilmorty.png",
+    "alt": "Evil Morty"
+},
+{
+    "id": 4,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/goldenford.png",
+    "alt": "Golden Ford"
+},
+{
+    "id": 5,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/beth.png",
+    "alt": "Beth"
+},
+{
+    "id": 6,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/morty.png",
+    "alt": "Morty"
+},
+{
+    "id": 7,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/jerry.png",
+    "alt": "Jerry"
+},
+{
+    "id": 8,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/summer.png",
+    "alt": "Summer"
+},
+{
+    "id": 9,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/jessica.png",
+    "alt": "Jessica"
+},
+{
+    "id": 10,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/gianthead.png",
+    "alt": "Giant Head"
+},
+{
+    "id": 11,
+    "selected": false,
+    "value": "https://clicky-game.netlify.com/assets/images/rick.png",
+    "alt": "Rick"
 }]
